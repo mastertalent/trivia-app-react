@@ -29,12 +29,12 @@
     "node": "15.8.0"
   },
   "scripts": {
-    "start": "node react-scripts start",
+    "start": "node src/index.tsx",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "postinstall":"tsc",
+  "postinstall": "tsc",
   "eslintConfig": {
     "extends": [
       "react-app",
