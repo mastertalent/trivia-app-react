@@ -1,4 +1,3 @@
-// import React from "react";
 import { RootRouter } from "./navigation";
 
 function App() {
