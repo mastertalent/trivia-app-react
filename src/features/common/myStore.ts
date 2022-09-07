@@ -21,9 +21,6 @@ export const myStore = createSlice({
     setAnswer: (state: any, action: any) => {
       state.answers.push(action.payload);
     },
-    error: (state, action) => {
-      state.error = action.payload;
-    },
     reset: (state) => {
       state.questions = [];
       state.answers = [];
@@ -32,7 +29,7 @@ export const myStore = createSlice({
   },
 });
 
-export const { setQuestions, setAnswer, error, reset } = myStore.actions;
+export const { setQuestions, setAnswer, reset } = myStore.actions;
 
 export const fetchQuestions = () => (dispatch: (arg0: { payload: any; type: string; } | { payload: undefined; type: string; }) => void) => {
   axios
@@ -44,7 +41,6 @@ export const fetchQuestions = () => (dispatch: (arg0: { payload: any; type: stri
     })
     .catch((e) => {
       console.error(e);
-      dispatch(error(e.message));
     });
 };
 
