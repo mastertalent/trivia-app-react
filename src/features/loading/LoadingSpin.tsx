@@ -3,7 +3,7 @@ const LoadingSpin = () => {
     <div className="center">
       <div className="lds-hourglass"></div>
       <div></div>
-      <div>Loading Problems...</div>
+      <div>Loading...</div>
     </div>
   );
 };
