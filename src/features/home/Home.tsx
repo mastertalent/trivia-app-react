@@ -7,7 +7,7 @@ const Home = () => {
     <div className={"center"}>
       <div className={"title"}>{APP_TITLE}</div>
       <div className={"desc"}>
-        You will be presented with 10 True of False questions.
+        You will be presented with 10 True or False questions.
       </div>
       <div className={"desc"}>Can you score 100%?</div>
       <div>
