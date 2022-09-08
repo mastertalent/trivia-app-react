@@ -1,6 +1,6 @@
 import Error from "../features/error";
 
-export type ProtectedRouteProps = {
+type ProtectedRouteProps = {
   isAuthenticated: boolean;
   errorComponent: JSX.Element;
   outlet: JSX.Element;

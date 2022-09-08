@@ -1,12 +1,5 @@
 import React from "react";
-
-interface QuizPropTypes {
-  category: string;
-  number: number;
-  total: number;
-  question: string;
-  onAnswer: any;
-}
+import { QuizPropTypes } from "../common/interface";
 
 const Quiz: React.FC<QuizPropTypes> = ({
   category,
