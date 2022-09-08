@@ -8,6 +8,7 @@ export const myStore = createSlice({
   initialState: {
     questions: [],
     answers: [],
+    isAuthenticated: false,
     error: undefined,
   },
   reducers: {
@@ -24,6 +25,7 @@ export const myStore = createSlice({
     reset: (state) => {
       state.questions = [];
       state.answers = [];
+      state.isAuthenticated = true;
       state.error = undefined;
     },
   },
@@ -63,6 +65,13 @@ export const selectQuestion = (state: { common: any; }) => {
 
   return {};
 };
+
+export const _isAuthenticated = (state: { common: any; }) => {
+  const { common } = state;
+  const { isAuthenticated } = common;
+
+  return isAuthenticated;
+}
 
 export const selectResults = (state: { common: any; }) => {
   const { common } = state;
