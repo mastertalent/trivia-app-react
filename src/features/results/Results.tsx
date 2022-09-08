@@ -1,9 +1,4 @@
-import React, { MouseEventHandler } from "react";
-
-interface AnswerProps {
-  question: string;
-  rightAnswer: boolean;
-}
+import { AnswerProps, ResultsProps } from "../common/interface";
 
 const Answer: React.FC<AnswerProps> = ({ question, rightAnswer }) => {
   return (
@@ -13,11 +8,6 @@ const Answer: React.FC<AnswerProps> = ({ question, rightAnswer }) => {
     </div>
   );
 };
-
-interface ResultsProps {
-  results: any;
-  onPlayAgain: MouseEventHandler<HTMLButtonElement>;
-}
 
 const Results: React.FC<ResultsProps> = ({ results, onPlayAgain }) => {
   const rightAnswer = results.filter(

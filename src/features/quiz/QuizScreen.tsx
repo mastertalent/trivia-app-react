@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import Quiz from "./Quiz";
 import { LoadingSpin } from "../loading";
 import { useSelector } from "react-redux";
@@ -16,12 +16,15 @@ const QuizScreen = () => {
     dispath(fetchQuestions());
   }, [dispath]);
 
-  const onAnswer = (answer: boolean) => {
-    dispath(setAnswer(answer));
-    if (result.number === result.total) {
-      navigate("/results");
-    }
-  };
+  const onAnswer = useCallback(
+    (answer: string) => {
+      dispath(setAnswer(answer));
+      if (result.number === result.total) {
+        navigate("/results");
+      }
+    },
+    [dispath, result.number, result.total, navigate]
+  );
 
   if (result.question) {
     return <Quiz {...result} onAnswer={onAnswer} />;
