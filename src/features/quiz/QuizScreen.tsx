@@ -23,7 +23,7 @@ const QuizScreen = () => {
         navigate("/results");
       }
     },
-    [dispath]
+    [dispath, result.number, result.total, navigate]
   );
 
   if (result.question) {

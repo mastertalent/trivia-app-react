@@ -40,6 +40,7 @@ const RootRouter = () => {
         {routes.map((route, i) => {
           return route.protected ? (
             <Route
+              key={i}
               path={`/${route.path}`}
               element={
                 <ProtectedRoute
@@ -49,7 +50,11 @@ const RootRouter = () => {
               }
             />
           ) : (
-            <Route path={`/${route.path}`} element={<route.element />} />
+            <Route
+              key={i}
+              path={`/${route.path}`}
+              element={<route.element />}
+            />
           );
         })}
       </Routes>
